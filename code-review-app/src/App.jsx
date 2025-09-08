@@ -1,4 +1,5 @@
 import { useState } from "react";
+import './styles/index.scss';
 import CodePanel from "./components/CodePanel";
 import ReviewResult from "./components/ReviewResult";
 

@@ -1,11 +1,19 @@
+import '../styles/ReviewResult.scss'
 
-const ReviewResult = () => {
+const ReviewResult = ({ result }) => {
   return (
     <div className="result-panel">
-      <h2>Результаты анализа:</h2>
-      <pre></pre>
+      <pre>
+        {result ? (
+          result
+        ) : (
+          <span className="placeholder-text">
+            Введите код слева и нажмите 'Отправить', чтобы увидеть результат анализа здесь.
+          </span>
+        )}
+      </pre>
     </div>
-  )
-}
+  );
+};
 
 export default ReviewResult;

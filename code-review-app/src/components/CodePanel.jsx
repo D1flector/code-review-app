@@ -1,3 +1,4 @@
+import '../styles/CodePanel.scss'
 
 const CodePanel = ({ code, onCodeChange, onSubmit }) => {
 

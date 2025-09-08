@@ -1,0 +1,36 @@
+$font-sans: 'Inter', system-ui, sans-serif;
+$font-mono: 'Fira Code', monospace;
+
+$bg-color: #1a1b26;
+$bg-secondary-color: #24283b;
+$text-color: #c0caf5;
+$text-secondary-color: #a9b1d6;
+$accent-color: #7aa2f7;
+$border-color: #414868;
+
+body {
+  margin: 0;
+  font-family: $font-sans;
+  background-color: $bg-color;
+  color: $text-color;
+}
+
+.app-container {
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  font-weight: 500;
+  color: $text-secondary-color;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid $border-color;
+}
+
+.main-content {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:wght@400;500&display=swap');
