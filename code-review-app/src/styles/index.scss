@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:wght@400;500&display=swap');
+
 $font-sans: 'Inter', system-ui, sans-serif;
 $font-mono: 'Fira Code', monospace;
 
@@ -8,6 +10,7 @@ $text-secondary-color: #a9b1d6;
 $accent-color: #7aa2f7;
 $border-color: #414868;
 
+
 body {
   margin: 0;
   font-family: $font-sans;
@@ -16,8 +19,12 @@ body {
 }
 
 .app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
   padding: 20px;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -25,12 +32,14 @@ h1 {
   color: $text-secondary-color;
   padding-bottom: 1rem;
   border-bottom: 1px solid $border-color;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 2rem;
 }
 
 .main-content {
   display: flex;
   gap: 20px;
   margin-top: 20px;
+  flex-grow: 1;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:wght@400;500&display=swap');
