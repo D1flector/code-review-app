@@ -1,10 +1,11 @@
 import { useState } from "react";
+import CodePanel from "./components/CodePanel";
+import ReviewResult from "./components/ReviewResult";
 
 function App() {
   const [value, setValue] = useState('');
-  
-  function handleSubmit(e) {
-    e.preventDefault();
+
+  function handleSubmit() {
     setValue('');
   }
 
@@ -13,19 +14,12 @@ function App() {
       <div className="app-container">
         <h1>AI Code Review</h1>
         <div className="main-content">
-          <div className="editor-panel">
-            <textarea
-              placeholder="Вставьте ваш код"
-              value={value}
-              onChange={(e) => setValue(e.target.value)}
-            >
-            </textarea>
-            <button onClick={handleSubmit}>Отправить</button>
-          </div>
-          <div className="result-panel">
-            <h2>Результаты анализа:</h2>
-            <pre></pre>
-          </div>
+          <CodePanel 
+            code={value} 
+            onCodeChange={setValue} 
+            onSubmit={handleSubmit} 
+          />
+          <ReviewResult />
         </div>
       </div>
     </>
