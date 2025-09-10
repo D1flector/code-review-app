@@ -1,6 +1,6 @@
 import '../styles/CodePanel.scss'
 
-const CodePanel = ({ code, onCodeChange, onSubmit }) => {
+const CodePanel = ({ code, onCodeChange, onSubmit, isLoading }) => {
 
   return (
     <>
@@ -9,9 +9,15 @@ const CodePanel = ({ code, onCodeChange, onSubmit }) => {
         placeholder="Вставьте ваш код"
         value={code}
         onChange={(e) => onCodeChange(e.target.value)}
+        readOnly={isLoading}
       >
       </textarea>
-      <button onClick={onSubmit}>Отправить</button>
+      <button
+        onClick={onSubmit}
+        disabled={isLoading || !code} 
+      >
+        {isLoading ? 'Анализ...' : 'Отправить'}
+      </button>
     </div>
     </>
   )
